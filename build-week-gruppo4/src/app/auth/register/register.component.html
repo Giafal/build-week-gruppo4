@@ -1,1 +1,76 @@
-<p>register works!</p>
+<main class="form-signin m-auto">
+
+  <div class="container w-100 my-0">
+    <form #f="ngForm" (ngSubmit)="register()" class="w-50 text-center">
+      <h2 class="h3 mb-3 fw-bold pt-5">REGISTRATI</h2>
+
+      <div class="form-floating">
+        <input
+          required
+          [(ngModel)]="data.email"
+          #nomes="ngModel"
+          ngModel
+          type="email"
+          name="email"
+          class="form-control my-1"
+          id="floatingInput"
+          placeholder="name@example.com"
+        />
+        <label for="floatingInput">Email address</label>
+        <span *ngIf="nomes.invalid && nomes.touched">Campo obbligatorio</span>
+      </div>
+      <div class="form-floating">
+        <input
+          required
+          [(ngModel)]="data.password"
+          #nomes="ngModel"
+          ngModel
+          type="password"
+          name="password"
+          class="form-control my-1"
+          id="floatingPassword"
+          placeholder="Password"
+        />
+        <label for="floatingPassword">password</label>
+        <span *ngIf="nomes.invalid && nomes.touched">Campo obbligatorio</span>
+      </div>
+      <div class="form-floating">
+        <input
+          [(ngModel)]="data.name"
+          #nomes="ngModel"
+          ngModel
+          type="name"
+          name="name"
+          class="form-control my-1"
+          id="floatingInput"
+          placeholder="name"
+        />
+        <label for="floatingInput">Name</label>
+
+      </div>
+      <div class="form-floating">
+        <input
+          [(ngModel)]="data.surname"
+          #nomes="ngModel"
+          ngModel
+          type="surname"
+          name="surname"
+          class="form-control my-1"
+          id="floatingInput"
+          placeholder="Surname"
+        />
+        <label for="floatingInput">Surname</label>
+
+      </div>
+      <button
+        type="submit"
+        [disabled]="f.invalid"
+        class="btn btn-success"
+        [routerLink]="['']"
+      >
+        registrati
+      </button>
+      <p class="mt-5 mb-3 text-light">© 2017–2023</p>
+    </form>
+  </div>
+</main>
