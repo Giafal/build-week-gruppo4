@@ -1,1 +1,6 @@
-export interface AccesData {}
+import { User } from './user';
+
+export interface AccesData {
+  accessToken: string;
+  user: User;
+}
