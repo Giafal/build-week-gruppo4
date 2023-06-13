@@ -22,6 +22,18 @@ export class RegisterComponent {
     name:'',
     surname: '',
   }
+
+  register(){
+    this.authsvc.signUp(this.data).subscribe(accessData => {
+      alert(accessData.user.name)
+
+    })
+  }
+
+  ngOnInit():void{
+
+  }
+
 }
 
 
