@@ -16,7 +16,7 @@ const routes: Routes = [
     path: 'crud',
     loadChildren: () => import('./crud/crud.module').then((m) => m.CrudModule),
     canActivate: [AuthGuard],
-  }
+  },
 
   {path: 'features',
   component: FeaturesComponent},
