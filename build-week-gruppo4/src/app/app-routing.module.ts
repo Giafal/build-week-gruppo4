@@ -10,7 +10,8 @@ const routes: Routes = [
   {
     path: 'crud',
     loadChildren: () => import('./crud/crud.module').then((m) => m.CrudModule),
-  },
+  }
+
 ];
 
 @NgModule({
