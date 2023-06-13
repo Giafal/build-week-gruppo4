@@ -4,5 +4,14 @@
       "nome": "francesco",
       "cognome": "rossi"
     }
+  ],
+
+  "animals": [
+    {
+      "cane": []
+    },
+    {
+      "gatto": []
+    }
   ]
 }
