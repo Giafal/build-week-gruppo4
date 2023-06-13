@@ -31,7 +31,7 @@ export class EditComponent {
   }
 
   edit() {
-    this.crudSvc.put(this.animal).subscribe((pizze) => {
+    this.crudSvc.put(this.animal).subscribe((animal) => {
       this.router.navigate(['/crud']);
     });
   }
