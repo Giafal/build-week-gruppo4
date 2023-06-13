@@ -7,10 +7,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FaqsComponent } from './components/faqs/faqs.component';
+import { AboutComponent } from './components/about/about.component';
+import { DogsComponent } from './components/dogs/dogs.component';
 import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, FaqsComponent, AboutComponent, DogsComponent, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
