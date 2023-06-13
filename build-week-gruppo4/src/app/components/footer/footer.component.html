@@ -4,14 +4,14 @@
   >
     <div class="col mb-3">
       <a
-        href="/"
-        class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none"
+        [routerLink]="['/auth']"
+        class="d-flex align-items-center mb-2 link-body-emphasis text-decoration-none"
       >
         <img
           class="bi me-2"
-          width="40"
-          height="32"
-          src="https://placekitten.com/200/200"
+          width="70"
+          height="70"
+          src="https://cdn.discordapp.com/attachments/1092788792601092116/1118095620683595836/vecteezy_vector-pet-shop-logo-design-template-modern-animal-icon_6470722-PhotoRoom.png-PhotoRoom.png"
         />
       </a>
       <p class="text-body-secondary">© 2023</p>
@@ -23,19 +23,26 @@
       <h5>About us</h5>
       <ul class="nav flex-column">
         <li class="nav-item mb-2">
-          <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
+          <a [routerLink]="['/auth']" class="nav-link p-0 text-body-secondary"
+            >Home</a
+          >
         </li>
         <li class="nav-item mb-2">
-          <a href="#" class="nav-link p-0 text-body-secondary">Features</a>
+          <a
+            [routerLink]="['/features']"
+            class="nav-link p-0 text-body-secondary"
+            >Features</a
+          >
         </li>
         <li class="nav-item mb-2">
-          <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
+          <a [routerLink]="['/faqs']" class="nav-link p-0 text-body-secondary"
+            >FAQs</a
+          >
         </li>
         <li class="nav-item mb-2">
-          <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
-        </li>
-        <li class="nav-item mb-2">
-          <a href="#" class="nav-link p-0 text-body-secondary">About</a>
+          <a [routerLink]="['/about']" class="nav-link p-0 text-body-secondary"
+            >About</a
+          >
         </li>
       </ul>
     </div>
@@ -44,10 +51,9 @@
       <h5>Animals Section</h5>
       <ul class="nav flex-column">
         <li class="nav-item mb-2">
-          <a href="#" class="nav-link p-0 text-body-secondary">Our animals</a>
-        </li>
-        <li class="nav-item mb-2">
-          <a href="#" class="nav-link p-0 text-body-secondary">Dogs</a>
+          <a [routerLink]="['/dogs']" class="nav-link p-0 text-body-secondary"
+            >Dogs</a
+          >
         </li>
         <li class="nav-item mb-2">
           <a href="#" class="nav-link p-0 text-body-secondary">Cats</a>

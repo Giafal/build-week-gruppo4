@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Ianimals } from '../interfaces/ianimals';
 import { CrudService } from './crud.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-crud',
@@ -16,6 +17,8 @@ export class CrudComponent {
     description: '',
     url: '',
   };
+
+  @ViewChild('f') form!: NgForm;
 
   constructor(private crudSvc: CrudService) {}
 
@@ -36,6 +39,7 @@ export class CrudComponent {
   create() {
     this.crudSvc.post(this.newAnimal).subscribe((data) => {
       this.animals.push(data);
+      this.form.reset();
     });
   }
 }

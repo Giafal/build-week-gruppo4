@@ -1,0 +1,26 @@
+<form>
+  <input
+    type="text"
+    class="form-control"
+    name="name"
+    [(ngModel)]="animal.name"
+  />
+
+  <input
+    type="text"
+    class="form-control"
+    name="breed"
+    [(ngModel)]="animal.breed"
+  />
+
+  <input
+    type="text"
+    class="form-control"
+    name="description"
+    [(ngModel)]="animal.description"
+  />
+
+  <input type="text" class="form-control" name="url" [(ngModel)]="animal.url" />
+
+  <button class="btn btn-primary" (click)="edit()">Modifica cane</button>
+</form>
