@@ -15,7 +15,7 @@ export class CrudService {
   }
 
   getById(id: number) {
-    return this.http.get<Ianimals>(`${this.apiUrl}/${id}`);
+    return this.http.get<Ianimals>(`${this.apiUrl}/${'cane'}/${id}`);
   }
 
   post(data: Partial<Ianimals>) {
@@ -23,7 +23,7 @@ export class CrudService {
   }
 
   put(data: Partial<Ianimals>) {
-    return this.http.put<Ianimals>(`${this.apiUrl}/${data.id}`, data);
+    return this.http.put<Ianimals>(`${this.apiUrl}/${'cane'}/${data.id}`, data);
   }
 
   delete(id: number) {

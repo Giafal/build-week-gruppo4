@@ -12,7 +12,7 @@ import { RegisterData } from '../interfaces/register-data';
 })
 export class AuthService {
   jwtHelper: JwtHelperService = new JwtHelperService();
-  apiUrl: string = 'http://localhost:3000/user';
+  apiUrl: string = 'http://localhost:3000';
 
   private authSubject = new BehaviorSubject<null | AccesData>(null);
 
@@ -26,7 +26,7 @@ export class AuthService {
   }
 
   login(data: LoginData) {
-    return this.http.post<AccesData>(this.apiUrl + '/login', data).pipe(
+    return this.http.post<AccesData>(this.apiUrl + '/' + 'login', data).pipe(
       tap((data) => {
         this.authSubject.next(data);
         localStorage.setItem('user', JSON.stringify(data));
@@ -35,30 +35,30 @@ export class AuthService {
           data.accessToken
         ) as Date;
         this.autoLogout(expDate);
-      }),
-      catchError(this.errors)
+      })
+      // catchError(this.errors)
     );
   }
 
-  errors(err: any) {
-    switch (err.error) {
-      case 'Email and Password are required':
-        return throwError('Email e password obbligatorie');
-        break;
-      case 'Email already exists':
-        return throwError('Utente esistente');
-        break;
-      case 'Email format is invalid':
-        return throwError('Email scritta male');
-        break;
-      case 'Cannot find user':
-        return throwError('utente inesistente');
-        break;
-      default:
-        return throwError('Errore');
-        break;
-    }
-  }
+  // errors(err: any) {
+  //   switch (err.error) {
+  //     case 'Email and Password are required':
+  //       return throwError('Email e password obbligatorie');
+  //       break;
+  //     case 'Email already exists':
+  //       return throwError('Utente esistente');
+  //       break;
+  //     case 'Email format is invalid':
+  //       return throwError('Email scritta male');
+  //       break;
+  //     case 'Cannot find user':
+  //       return throwError('utente inesistente');
+  //       break;
+  //     default:
+  //       return throwError('Errore');
+  //       break;
+  //   }
+  // }
 
   restoreUser() {
     const userJson = localStorage.getItem('user');
@@ -76,9 +76,8 @@ export class AuthService {
   }
 
   signUp(data: RegisterData) {
-    return this.http
-      .post<AccesData>(this.apiUrl + '/register', data)
-      .pipe(catchError(this.errors));
+    return this.http.post<AccesData>(this.apiUrl + '/' + 'register', data);
+    // .pipe(catchError(this.errors));
   }
 
   logout() {

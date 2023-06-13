@@ -5,6 +5,9 @@
     <div class="col-2">
       <a class="btn btn-primary" [routerLink]="['/auth', 'login']">Accedi</a>
     </div>
+    <div class="col-2" *ngIf="isLogged">
+      <a class="btn btn-primary" (click)="logout()">Logout</a>
+    </div>
     <div class="col-2">
       <a class="btn btn-primary" [routerLink]="['/auth', 'register']"
         >Registrati</a
