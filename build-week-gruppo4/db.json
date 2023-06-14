@@ -27,6 +27,13 @@
       "name": "Mario",
       "surname": "Biondi",
       "id": 4
+    },
+    {
+      "email": "ciao_ciao@gmail.com",
+      "password": "$2a$10$BjhWsEJNG/KFxjKHcJ0KTuwikaqQxbejSDyg/DEUzw9aBVsKgrF3i",
+      "name": "ciaone",
+      "surname": "ciao",
+      "id": 5
     }
   ],
   "animals": [],
