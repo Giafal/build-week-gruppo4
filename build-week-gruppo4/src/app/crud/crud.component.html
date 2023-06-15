@@ -27,105 +27,81 @@
     [(ngModel)]="newAnimal.url"
     placeholder="Url"
   />
-  <select name="specie" id="specie" class="form-control" [(ngModel)]="specie">
-    <option value="" selected>--scegli specie--</option>
+  <select
+    name="specie"
+    id="specie"
+    class="form-select"
+    multiple
+    aria-label="multiple select example"
+    [(ngModel)]="specie"
+  >
+    <option selected>--scegli specie--</option>
     <option value="cane">Cane</option>
     <option value="gatto">Gatto</option>
     <option value="uccelli">Uccello</option>
-    <option value="coniglio">Coniglio</option>
+    <option value="coniglio">Criceto</option>
   </select>
-  <button class="btn btn-primary" (click)="create(specie)">
-    Aggiungi cane
-  </button>
+  <button class="btn btn-primary" (click)="create(specie)">Aggiungi pet</button>
 </form>
 
-<!-- <table class="table mt-5">
-  <tr *ngFor="let animal of animals">
-    <td><img src="{{ animal.url }}" alt="" /></td>
-    <td>{{ animal.name }}</td>
-    <td>{{ animal.breed }}</td>
-    <td>{{ animal.description }}</td>
+<table class="table mt-5">
+  <tr *ngFor="let dog of dogs">
+    <td><img src="{{ dog.url }}" alt="" /></td>
+    <td>{{ dog.name }}</td>
+    <td>{{ dog.breed }}</td>
+    <td>{{ dog.description }}</td>
     <td>
-      <a class="btn btn-warning" [routerLink]="['/crud', 'edit', animal.id]">
+      <a class="btn btn-warning" [routerLink]="['/crud', 'edit', dog.id]">
         Modifica
       </a>
-      <button class="btn btn-danger" (click)="delete(animal.id)">Delete</button>
+      <button class="btn btn-danger" (click)="deleteDog(dog.id)">
+        Elimina
+      </button>
     </td>
   </tr>
-</table> -->
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-3" *ngFor="let dog of dogs">
-      <div class="card">
-        <img src="{{ dog.url }}" class="card-img-top" alt="..." height="300" />
-        <div class="card-body">
-          <h5 class="card-title">{{ dog.name }}</h5>
-          <h6 class="card-title">{{ dog.breed }}</h6>
-          <p class="card-text">{{ dog.description }}</p>
-          <a class="btn btn-warning" [routerLink]="['/crud', 'edit', dog.id]">
-            Modifica
-          </a>
-          <a class="btn btn-primary" (click)="deleteDog(dog.id)">Cancella</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-3" *ngFor="let cat of cats">
-      <div class="card">
-        <img src="{{ cat.url }}" class="card-img-top" alt="..." height="300" />
-        <div class="card-body">
-          <h5 class="card-title">{{ cat.name }}</h5>
-          <h6 class="card-title">{{ cat.breed }}</h6>
-          <p class="card-text">{{ cat.description }}</p>
-          <a
-            class="btn btn-warning"
-            [routerLink]="['/crud', 'edit-cat', cat.id]"
-          >
-            Modifica
-          </a>
-          <a class="btn btn-primary" (click)="deleteCat(cat.id)">Cancella</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-3" *ngFor="let bird of birds">
-      <div class="card">
-        <img src="{{ bird.url }}" class="card-img-top" alt="..." height="300" />
-        <div class="card-body">
-          <h5 class="card-title">{{ bird.name }}</h5>
-          <h6 class="card-title">{{ bird.breed }}</h6>
-          <p class="card-text">{{ bird.description }}</p>
-          <a
-            class="btn btn-warning"
-            [routerLink]="['/crud', 'edit-bird', bird.id]"
-          >
-            Modifica
-          </a>
-          <a class="btn btn-primary" (click)="deleteBird(bird.id)">Cancella</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-3" *ngFor="let hamster of hamsters">
-      <div class="card">
-        <img
-          src="{{ hamster.url }}"
-          class="card-img-top"
-          alt="..."
-          height="300"
-        />
-        <div class="card-body">
-          <h5 class="card-title">{{ hamster.name }}</h5>
-          <h6 class="card-title">{{ hamster.breed }}</h6>
-          <p class="card-text">{{ hamster.description }}</p>
-          <a
-            class="btn btn-warning"
-            [routerLink]="['/crud', 'edit-hamster', hamster.id]"
-          >
-            Modifica
-          </a>
-          <a class="btn btn-primary" (click)="deleteHamster(hamster.id)"
-            >Cancella</a
-          >
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+  <tr *ngFor="let cat of cats">
+    <td><img src="{{ cat.url }}" alt="" /></td>
+    <td>{{ cat.name }}</td>
+    <td>{{ cat.breed }}</td>
+    <td>{{ cat.description }}</td>
+    <td>
+      <a class="btn btn-warning" [routerLink]="['/crud', 'edit-cat', cat.id]">
+        Modifica
+      </a>
+      <button class="btn btn-danger" (click)="deleteCat(cat.id)">
+        Elimina
+      </button>
+    </td>
+  </tr>
+  <tr *ngFor="let bird of birds">
+    <td><img src="{{ bird.url }}" alt="" /></td>
+    <td>{{ bird.name }}</td>
+    <td>{{ bird.breed }}</td>
+    <td>{{ bird.description }}</td>
+    <td>
+      <a class="btn btn-warning" [routerLink]="['/crud', 'edit-bird', bird.id]">
+        Modifica
+      </a>
+      <button class="btn btn-danger" (click)="deleteBird(bird.id)">
+        Elimina
+      </button>
+    </td>
+  </tr>
+  <tr *ngFor="let hamster of hamsters">
+    <td><img src="{{ hamster.url }}" alt="" /></td>
+    <td>{{ hamster.name }}</td>
+    <td>{{ hamster.breed }}</td>
+    <td>{{ hamster.description }}</td>
+    <td>
+      <a
+        class="btn btn-warning"
+        [routerLink]="['/crud', 'edit-hamster', hamster.id]"
+      >
+        Modifica
+      </a>
+      <button class="btn btn-danger" (click)="deleteHamster(hamster.id)">
+        Elimina
+      </button>
+    </td>
+  </tr>
+</table>
