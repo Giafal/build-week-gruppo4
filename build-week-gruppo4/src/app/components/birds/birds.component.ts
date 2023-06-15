@@ -3,12 +3,12 @@ import { CrudService } from 'src/app/crud/crud.service';
 import { Ianimals } from 'src/app/interfaces/ianimals';
 
 @Component({
-  selector: 'app-dogs',
-  templateUrl: './dogs.component.html',
-  styleUrls: ['./dogs.component.scss'],
+  selector: 'app-birds',
+  templateUrl: './birds.component.html',
+  styleUrls: ['./birds.component.scss'],
 })
-export class DogsComponent {
-  dog: Ianimals = {
+export class BirdsComponent {
+  bird: Ianimals = {
     id: 0,
     name: '',
     breed: '',
@@ -16,18 +16,16 @@ export class DogsComponent {
     url: '',
   };
 
-  dogs: Ianimals[] = [];
+  birds: Ianimals[] = [];
 
   constructor(private crudSvc: CrudService) {}
 
   ngOnInit() {
-    this.getDogs();
+    this.getBirds();
   }
-
-  getDogs() {
-    this.crudSvc.getAll('cane').subscribe((data) => {
-      this.dogs = data;
-      console.log(this.dogs);
+  getBirds() {
+    this.crudSvc.getAll('uccelli').subscribe((data) => {
+      this.birds = data;
     });
   }
 }
