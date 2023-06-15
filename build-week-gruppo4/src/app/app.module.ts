@@ -10,10 +10,21 @@ import { HttpClientModule } from '@angular/common/http';
 import { FaqsComponent } from './components/faqs/faqs.component';
 import { AboutComponent } from './components/about/about.component';
 import { DogsComponent } from './components/dogs/dogs.component';
+import { CatsComponent } from './components/cats/cats.component';
+import { AnimalsComponent } from './components/animals/animals.component';
 import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, FaqsComponent, AboutComponent, DogsComponent, HomeComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    FaqsComponent,
+    AboutComponent,
+    DogsComponent, HomeComponent,
+    CatsComponent,
+    AnimalsComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
