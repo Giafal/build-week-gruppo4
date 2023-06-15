@@ -12,6 +12,9 @@ import { AboutComponent } from './components/about/about.component';
 import { DogsComponent } from './components/dogs/dogs.component';
 import { CatsComponent } from './components/cats/cats.component';
 import { AnimalsComponent } from './components/animals/animals.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent, FaqsComponent, AboutComponent, DogsComponent, CatsComponent, AnimalsComponent],
@@ -21,6 +24,8 @@ import { AnimalsComponent } from './components/animals/animals.component';
     NgbModule,
     FormsModule,
     HttpClientModule,
+    MatExpansionModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
