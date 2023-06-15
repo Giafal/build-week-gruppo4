@@ -10,23 +10,23 @@ export class CrudService {
 
   constructor(private http: HttpClient) {}
 
-  getAll() {
-    return this.http.get<Ianimals[]>(this.apiUrl + '/' + 'cane');
+  getAll(specie: string) {
+    return this.http.get<Ianimals[]>(this.apiUrl + '/' + specie);
   }
 
-  getById(id: number) {
-    return this.http.get<Ianimals>(`${this.apiUrl}/${'cane'}/${id}`);
+  getById(id: number, specie: string) {
+    return this.http.get<Ianimals>(`${this.apiUrl}/${specie}/${id}`);
   }
 
-  post(data: Partial<Ianimals>) {
-    return this.http.post<Ianimals>(`${this.apiUrl}/${'cane'}`, data);
+  post(data: Partial<Ianimals>, specie: string) {
+    return this.http.post<Ianimals>(`${this.apiUrl}/${specie}`, data);
   }
 
-  put(data: Partial<Ianimals>) {
-    return this.http.put<Ianimals>(`${this.apiUrl}/${'cane'}/${data.id}`, data);
+  put(data: Partial<Ianimals>, specie: string) {
+    return this.http.put<Ianimals>(`${this.apiUrl}/${specie}/${data.id}`, data);
   }
 
-  delete(id: number) {
-    return this.http.delete<Ianimals>(`${this.apiUrl}/${'cane'}/${id}`);
+  delete(id: number, specie: string) {
+    return this.http.delete<Ianimals>(`${this.apiUrl}/${specie}/${id}`);
   }
 }

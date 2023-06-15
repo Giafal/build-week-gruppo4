@@ -27,7 +27,15 @@
     [(ngModel)]="newAnimal.url"
     placeholder="Url"
   />
-  <button class="btn btn-primary" (click)="create()">Aggiungi cane</button>
+  <select name="specie" id="specie" class="form-control" [(ngModel)]="specie">
+    <option value="">--scegli specie--</option>
+    <option value="cane">Cane</option>
+    <option value="gatto">Gatto</option>
+    <option value="uccelli">Uccello</option>
+    <option value="coniglio">Coniglio</option>
+  </select>
+
+  <button class="btn btn-primary" (click)="create(specie)">Aggiungi pet</button>
 </form>
 
 <!-- <table class="table mt-5">
@@ -46,25 +54,75 @@
 </table> -->
 <div class="container mt-5">
   <div class="row">
-    <div class="col-3" *ngFor="let animal of animals">
+    <div class="col-3" *ngFor="let dog of dogs">
+      <div class="card">
+        <img src="{{ dog.url }}" class="card-img-top" alt="..." height="300" />
+        <div class="card-body">
+          <h5 class="card-title">{{ dog.name }}</h5>
+          <h6 class="card-title">{{ dog.breed }}</h6>
+          <p class="card-text">{{ dog.description }}</p>
+          <a class="btn btn-warning" [routerLink]="['/crud', 'edit', dog.id]">
+            Modifica
+          </a>
+          <a class="btn btn-primary" (click)="deleteDog(dog.id)">Cancella</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-3" *ngFor="let cat of cats">
+      <div class="card">
+        <img src="{{ cat.url }}" class="card-img-top" alt="..." height="300" />
+        <div class="card-body">
+          <h5 class="card-title">{{ cat.name }}</h5>
+          <h6 class="card-title">{{ cat.breed }}</h6>
+          <p class="card-text">{{ cat.description }}</p>
+          <a
+            class="btn btn-warning"
+            [routerLink]="['/crud', 'edit-cat', cat.id]"
+          >
+            Modifica
+          </a>
+          <a class="btn btn-primary" (click)="deleteCat(cat.id)">Cancella</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-3" *ngFor="let bird of birds">
+      <div class="card">
+        <img src="{{ bird.url }}" class="card-img-top" alt="..." height="300" />
+        <div class="card-body">
+          <h5 class="card-title">{{ bird.name }}</h5>
+          <h6 class="card-title">{{ bird.breed }}</h6>
+          <p class="card-text">{{ bird.description }}</p>
+          <a
+            class="btn btn-warning"
+            [routerLink]="['/crud', 'edit-bird', bird.id]"
+          >
+            Modifica
+          </a>
+          <a class="btn btn-primary" (click)="deleteBird(bird.id)">Cancella</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-3" *ngFor="let hamster of hamsters">
       <div class="card">
         <img
-          src="{{ animal.url }}"
+          src="{{ hamster.url }}"
           class="card-img-top"
           alt="..."
           height="300"
         />
         <div class="card-body">
-          <h5 class="card-title">{{ animal.name }}</h5>
-          <h6 class="card-title">{{ animal.breed }}</h6>
-          <p class="card-text">{{ animal.description }}</p>
+          <h5 class="card-title">{{ hamster.name }}</h5>
+          <h6 class="card-title">{{ hamster.breed }}</h6>
+          <p class="card-text">{{ hamster.description }}</p>
           <a
             class="btn btn-warning"
-            [routerLink]="['/crud', 'edit', animal.id]"
+            [routerLink]="['/crud', 'edit-hamster', hamster.id]"
           >
             Modifica
           </a>
-          <a class="btn btn-primary" (click)="delete(animal.id)">Cancella</a>
+          <a class="btn btn-primary" (click)="deleteHamster(hamster.id)"
+            >Cancella</a
+          >
         </div>
       </div>
     </div>
