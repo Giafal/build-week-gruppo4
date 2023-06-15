@@ -14,6 +14,8 @@ export class LoginComponent {
     password: '',
   };
 
+  isLogged: boolean = false;
+
   constructor(private authSvc: AuthService, private router: Router) {}
 
   login() {
@@ -21,6 +23,14 @@ export class LoginComponent {
     this.authSvc.login(this.data).subscribe((accessData) => {
       alert(`Sei loggato come ${accessData.user.name}`);
       this.router.navigate(['/crud']);
+      this.isLoggedIn();
     });
+  }
+
+  isLoggedIn() {
+    const userJson = localStorage.getItem('user');
+    if (userJson) {
+      this.isLogged = true;
+    }
   }
 }
