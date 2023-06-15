@@ -21,11 +21,14 @@ export class AuthService {
 
   authLogoutTimer: any;
 
+  isLogged: boolean = false;
+
   constructor(private http: HttpClient, private router: Router) {
     this.restoreUser();
   }
 
   login(data: LoginData) {
+    this.isLogged = true;
     return this.http.post<AccesData>(this.apiUrl + '/' + 'login', data).pipe(
       tap((data) => {
         this.authSubject.next(data);
@@ -81,6 +84,7 @@ export class AuthService {
   }
 
   logout() {
+    this.isLogged = false;
     this.authSubject.next(null);
     localStorage.removeItem('user');
     this.router.navigate(['/']);
