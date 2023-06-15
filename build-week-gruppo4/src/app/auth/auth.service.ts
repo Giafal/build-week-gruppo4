@@ -34,7 +34,7 @@ export class AuthService {
         const expDate = this.jwtHelper.getTokenExpirationDate(
           data.accessToken
         ) as Date;
-        this.autoLogout(expDate);
+        // this.autoLogout(expDate);
       })
       // catchError(this.errors)
     );
@@ -89,10 +89,10 @@ export class AuthService {
     }
   }
 
-  autoLogout(expDate: Date) {
+  /*autoLogout(expDate: Date) {
     const expMs = expDate.getTime() - new Date().getTime();
     this.authLogoutTimer = setTimeout(() => {
       this.logout();
     }, expMs);
-  }
+  }*/
 }

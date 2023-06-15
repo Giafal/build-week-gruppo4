@@ -27,6 +27,20 @@
       "name": "Mario",
       "surname": "Biondi",
       "id": 4
+    },
+    {
+      "email": "cicciogamer@email.com",
+      "password": "$2a$10$aD9isd4Q65VFUhggUPzQGunABlQDcKvQZ2XxshKKfxD2KZOWGn04O",
+      "name": "ciccio",
+      "surname": "gamer",
+      "id": 5
+    },
+    {
+      "email": "johnnydepp@email.com",
+      "password": "$2a$10$m3SiH5NzUS7qfc9oMm2GA.1XxO2pe/6gecv3jwH9NUD8Tg6J1Df0u",
+      "name": "johnny",
+      "surname": "depp",
+      "id": 6
     }
   ],
   "animals": [],
@@ -44,6 +58,98 @@
       "description": "Il Pastore Tedesco è una razza di cane rinomata per la sua intelligenza, lealtà e versatilità. Di taglia media a pelo lungo, presenta un corpo forte e muscoloso. È un cane da lavoro affidabile, utilizzato per una vasta gamma di compiti, come protezione, ricerca e soccorso, e come compagno fedele e devoto.",
       "url": "data:image/jpeg;base64,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",
       "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "name": "ciccio",
+      "surname": "gamer",
+      "text": "Questo negozio è molto bello",
+      "id": 1
+    },
+    {
+      "name": "ciccio",
+      "surname": "gamer",
+      "text": "ciao ciao amici",
+      "id": 2
+    },
+    {
+      "name": "ciccio",
+      "surname": "gamer",
+      "text": "ciao ciao amici",
+      "id": 3
+    },
+    {
+      "name": "ciccio",
+      "surname": "gamer",
+      "text": "ciao ciao amici",
+      "id": 4
+    },
+    {
+      "name": "ciccio",
+      "surname": "gamer",
+      "text": "hola Gerald",
+      "id": 5
+    },
+    {
+      "name": "ciccio",
+      "surname": "gamer",
+      "text": "Lorenzo mi ha copiato",
+      "id": 6
+    },
+    {
+      "name": "ciccio",
+      "surname": "gamer",
+      "text": "hola Gerald",
+      "id": 7
+    },
+    {
+      "name": "ciccio",
+      "surname": "gamer",
+      "text": "hola Gerald",
+      "id": 8
+    },
+    {
+      "name": "ciccio",
+      "surname": "gamer",
+      "text": "hola Gerald",
+      "id": 9
+    },
+    {
+      "name": "johnny",
+      "surname": "depp",
+      "text": "hola Gerald",
+      "id": 10
+    },
+    {
+      "name": "johnny",
+      "surname": "depp",
+      "text": "hola Gerald",
+      "id": 11
+    },
+    {
+      "name": "johnny",
+      "surname": "depp",
+      "text": "bella giocata",
+      "id": 12
+    },
+    {
+      "name": "johnny",
+      "surname": "depp",
+      "text": "hola Gerald",
+      "id": 13
+    },
+    {
+      "name": "johnny",
+      "surname": "depp",
+      "text": "hola Gerald",
+      "id": 14
+    },
+    {
+      "name": "johnny",
+      "surname": "depp",
+      "text": "hola Gerald",
+      "id": 15
     }
   ]
 }
