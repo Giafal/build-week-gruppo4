@@ -27,9 +27,17 @@
           >
         </li>
         <li><a href="#" class="nav-link px-2 text-white mx-3">Pets</a></li>
+        <li>
+          <a
+            href="#"
+            class="nav-link px-2 text-white mx-3"
+            [routerLink]="['/crud']"
+            >Add pet</a
+          >
+        </li>
         <li><a href="#" class="nav-link px-2 text-white mx-3">About</a></li>
         <li>
-          <a [routerLink]="['/FAQs']" class="nav-link px-2 text-white mx-3"
+          <a [routerLink]="['/faqs']" class="nav-link px-2 text-white mx-3"
             >FAQs</a
           >
         </li>
@@ -45,8 +53,28 @@
       </form>
 
       <div class="text-end">
-        <button type="button" class="btn btn-outline-light me-2">Login</button>
-        <button type="button" class="btn btn-outline-light btn-success">
+        <button
+          *ngIf="authSvc.isLogged; else loginButton"
+          (click)="logout()"
+          type="button"
+          class="btn btn-outline-light me-2"
+        >
+          Logout
+        </button>
+        <ng-template #loginButton>
+          <button
+            type="button"
+            class="btn btn-outline-light me-2"
+            [routerLink]="['/auth', 'login']"
+          >
+            Login
+          </button>
+        </ng-template>
+        <button
+          type="button"
+          class="btn btn-outline-light btn-success"
+          [routerLink]="['/auth', 'register']"
+        >
           Sign-up
         </button>
 
