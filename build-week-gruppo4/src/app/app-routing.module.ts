@@ -7,6 +7,8 @@ import { DogsComponent } from './components/dogs/dogs.component';
 import { AuthGuard } from './auth/auth.guard';
 import { CatsComponent } from './components/cats/cats.component';
 import { AnimalsComponent } from './components/animals/animals.component';
+import { BirdsComponent } from './components/birds/birds.component';
+import { HamstersComponent } from './components/hamsters/hamsters.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'auth', pathMatch: 'full' },
@@ -19,19 +21,20 @@ const routes: Routes = [
     loadChildren: () => import('./crud/crud.module').then((m) => m.CrudModule),
     canActivate: [AuthGuard],
   },
-
-  {path: 'features',
-  component: FeaturesComponent},
-  {path: 'faqs',
-  component: FaqsComponent},
-  {path: 'about',
-  component: AboutComponent},
-  {path: 'dogs',
-  component: DogsComponent},
-  {path: 'cats',
-  component: CatsComponent},
-  {path: 'animals',
-  component: AnimalsComponent},
+  { path: 'features', component: FeaturesComponent },
+  { path: 'faqs', component: FaqsComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'dogs', component: DogsComponent },
+  { path: 'cats', component: CatsComponent },
+  { path: 'animals', component: AnimalsComponent },
+  {
+    path: 'birds',
+    component: BirdsComponent,
+  },
+  {
+    path: 'hamsters',
+    component: HamstersComponent,
+  },
 ];
 
 @NgModule({

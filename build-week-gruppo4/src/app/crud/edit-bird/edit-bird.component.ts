@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { Ianimals } from 'src/app/interfaces/ianimals';
 import { CrudService } from '../crud.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { Ianimals } from 'src/app/interfaces/ianimals';
 
 @Component({
-  selector: 'app-edit',
-  templateUrl: './edit.component.html',
-  styleUrls: ['./edit.component.scss'],
+  selector: 'app-edit-bird',
+  templateUrl: './edit-bird.component.html',
+  styleUrls: ['./edit-bird.component.scss'],
 })
-export class EditComponent {
+export class EditBirdComponent {
   animal: Partial<Ianimals> = {
     name: '',
     breed: '',
@@ -24,15 +24,16 @@ export class EditComponent {
 
   ngOnInit() {
     this.route.params.subscribe((params: any) => {
-      this.crudSvc.getById(params.id, 'cane').subscribe((animal) => {
+      this.crudSvc.getById(params.id, 'uccelli').subscribe((animal) => {
         this.animal = animal;
       });
     });
   }
 
   edit() {
-    this.crudSvc.put(this.animal, 'cane').subscribe((animal) => {
+    this.crudSvc.put(this.animal, 'uccelli').subscribe((animal) => {
       this.router.navigate(['/crud']);
+      console.log(animal);
     });
   }
 }

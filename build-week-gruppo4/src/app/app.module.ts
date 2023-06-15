@@ -12,7 +12,9 @@ import { AboutComponent } from './components/about/about.component';
 import { DogsComponent } from './components/dogs/dogs.component';
 import { CatsComponent } from './components/cats/cats.component';
 import { AnimalsComponent } from './components/animals/animals.component';
-import { HomeComponent } from './pages/home/home.component';
+import { BirdsComponent } from './components/birds/birds.component';
+import { HamstersComponent } from './components/hamsters/hamsters.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
