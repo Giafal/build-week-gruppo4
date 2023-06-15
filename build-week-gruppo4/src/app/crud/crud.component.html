@@ -1,1 +1,46 @@
-<p>crud works!</p>
+<form #f="ngForm">
+  <input
+    type="text"
+    class="form-control"
+    name="name"
+    [(ngModel)]="newAnimal.name"
+    placeholder="Name"
+  />
+  <input
+    type="text"
+    class="form-control"
+    name="breed"
+    [(ngModel)]="newAnimal.breed"
+    placeholder="Breed"
+  />
+  <input
+    type="text"
+    class="form-control"
+    name="description"
+    [(ngModel)]="newAnimal.description"
+    placeholder="Description"
+  />
+  <input
+    type="text"
+    class="form-control"
+    name="Url"
+    [(ngModel)]="newAnimal.url"
+    placeholder="Url"
+  />
+  <button class="btn btn-primary" (click)="create()">Aggiungi cane</button>
+</form>
+
+<table class="table mt-5">
+  <tr *ngFor="let animal of animals">
+    <td><img src="{{ animal.url }}" alt="" /></td>
+    <td>{{ animal.name }}</td>
+    <td>{{ animal.breed }}</td>
+    <td>{{ animal.description }}</td>
+    <td>
+      <a class="btn btn-warning" [routerLink]="['/crud', 'edit', animal.id]">
+        Modifica
+      </a>
+      <button class="btn btn-danger" (click)="delete(animal.id)">Delete</button>
+    </td>
+  </tr>
+</table>
