@@ -12,9 +12,11 @@ import { AboutComponent } from './components/about/about.component';
 import { DogsComponent } from './components/dogs/dogs.component';
 import { CatsComponent } from './components/cats/cats.component';
 import { AnimalsComponent } from './components/animals/animals.component';
+import { FAQsComponent } from './components/faqs/faqs.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, FaqsComponent, AboutComponent, DogsComponent, CatsComponent, AnimalsComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent,
+    FAQsComponent, FaqsComponent, AboutComponent, DogsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
