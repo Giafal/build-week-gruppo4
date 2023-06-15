@@ -24,6 +24,7 @@ import { HomeComponent } from './pages/home/home.component';
     DogsComponent, HomeComponent,
     CatsComponent,
     AnimalsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

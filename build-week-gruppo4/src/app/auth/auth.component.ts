@@ -25,4 +25,6 @@ export class AuthComponent {
       this.isLogged = true;
     }
   }
+
+  
 }
