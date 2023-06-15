@@ -72,7 +72,7 @@ export class CrudComponent {
   }
 
   deleteHamster(id: number) {
-    this.crudSvc.delete(id, 'hamster').subscribe((data) => {
+    this.crudSvc.delete(id, 'coniglio').subscribe((data) => {
       let index = this.hamsters.findIndex((p) => p.id == id);
       this.hamsters.splice(index, 1);
     });

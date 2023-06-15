@@ -28,15 +28,14 @@
     placeholder="Url"
   />
   <select name="specie" id="specie" class="form-control" [(ngModel)]="specie">
-    <option value="" selected>--scegli specie--</option>
+    <option value="">--scegli specie--</option>
     <option value="cane">Cane</option>
     <option value="gatto">Gatto</option>
     <option value="uccelli">Uccello</option>
     <option value="coniglio">Coniglio</option>
   </select>
-  <button class="btn btn-primary" (click)="create(specie)">
-    Aggiungi cane
-  </button>
+
+  <button class="btn btn-primary" (click)="create(specie)">Aggiungi pet</button>
 </form>
 
 <!-- <table class="table mt-5">
