@@ -1,9 +1,12 @@
-<main class="form-signin w-100 m-auto">
-  <form>
+<main class="form-signin w-100 m-auto py-3">
+  <form #f="ngForm">
     <h1 class="mb-3">Inserisci i tuoi dati</h1>
 
-    <div class="form-floating">
+    <div class="form-floating py-2">
       <input
+        required
+        ngModel
+        #email="ngModel"
         type="email"
         name="email"
         class="form-control"
@@ -12,9 +15,13 @@
         [(ngModel)]="data.email"
       />
       <label for="floatingInput">Email address</label>
+      <span fw-bold *ngIf="email.invalid && email.touched">Campo Obbligatorio</span>
     </div>
-    <div class="form-floating">
+    <div class="form-floating py-2">
       <input
+        required
+        ngModel
+        #password="ngModel"
         type="password"
         name="password"
         class="form-control"
@@ -23,8 +30,9 @@
         [(ngModel)]="data.password"
       />
       <label for="floatingPassword">Password</label>
+      <span fw-bold *ngIf="password.invalid && password.touched">Campo Obbligatorio</span>
     </div>
 
-    <button class="btn btn-primary w-100 py-2" (click)="login()">Login</button>
+    <button [disabled]="f.invalid" class="btn btn-primary w-100 py-2" (click)="login()">Login</button>
   </form>
 </main>

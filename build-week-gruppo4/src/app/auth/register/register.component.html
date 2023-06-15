@@ -1,33 +1,57 @@
-<h1>Inserisci i tuoi dati</h1>
-<form>
+<main class="form-signin m-auto py-3">
+<form #f="ngForm" class="w-50 text-center">
+  <h1>Inserisci i tuoi dati</h1>
+  <div>
   <input
+    required
     type="email"
     placeholder="email"
     name="email"
     [(ngModel)]="data.email"
-    class="form-control"
+    class="form-control my-2"
+    id="email"
+    #datiPers="ngModel"
   />
+
+  <span *ngIf="datiPers.invalid && datiPers.touched">Campo Obbligatorio</span>
+</div>
+<div>
   <input
+    required
     type="password"
     placeholder="Password"
     name="password"
     [(ngModel)]="data.password"
-    class="form-control"
+    class="form-control my-2"
+    id="password"
   />
+
+  <span *ngIf="datiPers.invalid  && datiPers.touched">Campo Obbligatorio</span>
+</div>
+<div>
   <input
+    required
     type="text"
     placeholder="Name"
     name="name"
     [(ngModel)]="data.name"
-    class="form-control"
+    class="form-control my-2"
+    id="name"
   />
+
+  </div>
+  <div>
   <input
+    required
     type="text"
     placeholder="Surname"
     name="surname"
     [(ngModel)]="data.surname"
-    class="form-control"
+    class="form-control my-2"
+    id="surname"
   />
+</div>
 
-  <button class="btn btn-primary w-100" (click)="register()">Registrati</button>
+  <button class="btn btn-primary w-100 mb-3" [disabled]="f.invalid" (click)="register()">Registrati</button>
 </form>
+</main>

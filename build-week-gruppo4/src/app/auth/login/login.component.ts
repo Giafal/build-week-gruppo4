@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { LoginData } from 'src/app/interfaces/login-data';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -13,6 +14,8 @@ export class LoginComponent {
     email: '',
     password: '',
   };
+  @ViewChild('f')
+  form!: NgForm;
 
   isLogged: boolean = false;
 
