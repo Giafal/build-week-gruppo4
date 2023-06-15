@@ -10,8 +10,8 @@ export class CrudService {
 
   constructor(private http: HttpClient) {}
 
-  getAll() {
-    return this.http.get<Ianimals[]>(this.apiUrl + '/' + 'cane');
+  getAll(specie: string) {
+    return this.http.get<Ianimals[]>(this.apiUrl + '/' + specie);
   }
 
   getById(id: number, specie: string) {

@@ -25,7 +25,7 @@ export class CrudComponent {
   constructor(private crudSvc: CrudService) {}
 
   ngOnInit() {
-    this.crudSvc.getAll().subscribe((animals) => {
+    this.crudSvc.getAll('cane').subscribe((animals) => {
       this.animals = animals;
       console.log(animals);
     });
