@@ -82,7 +82,7 @@ export class CrudComponent {
     console.log(specie);
 
     this.crudSvc.post(this.newAnimal, specie).subscribe((data) => {
-      // this.animals.push(data);
+      this.getAnimals();
       this.form.reset();
     });
   }

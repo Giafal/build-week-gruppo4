@@ -1,11 +1,11 @@
 <main>
-  <div
-    class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary"
-  >
+  <div class="position-relative overflow-hidden p-3 p-md-5 text-center">
     <div class="col-md-6 p-lg-5 mx-auto my-5">
-      <h1 class="display-3 fw-bold">I nostri cani</h1>
+      <h1 class="display-3 fw-bold">I nostri gatti</h1>
       <h3 class="fw-normal text-muted mb-3">
-        L'amore incondizionato ha il naso bagnato!
+        La grazia di un gatto danza con l'eleganza dell'ombra, mentre i suoi
+        occhi risplendono come stelle misteriose, custodi dei segreti della
+        notte.
       </h3>
       <div class="gap-3 justify-content-center fw-normal">
         <span>Hai trovato un cucciolo?</span>
@@ -22,9 +22,9 @@
       class="product-device product-device-2 shadow-sm d-none d-md-block"
     ></div>
   </div>
-  <div class="container">
+  <div class="container pb-5">
     <div class="row">
-      <div *ngFor="let cat of cats" class="col-6 col-lg-4">
+      <div *ngFor="let cat of cats" class="col-6 col-lg-4 mb-5">
         <div
           class="text-light mx-md-2 pt-3 pt-md-5 px-md-5 text-center"
           style="background-color: rgb(156, 18, 0)"
@@ -37,12 +37,12 @@
           <div
             class="me-2 w-100"
             style="
-          height: 200px;
-          border-radius: 21px 21px 0 0;
-          background-image: url({{ cat.url }});
-          background-size: cover;
-          background-position: center;
-        "
+              height: 200px;
+              border-radius: 21px 21px 0 0;
+              background-image: url({{ cat.url }});
+              background-size: cover;
+              background-position: center;
+            "
           ></div>
         </div>
       </div>

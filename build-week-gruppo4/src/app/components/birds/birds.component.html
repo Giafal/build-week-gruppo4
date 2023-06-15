@@ -1,14 +1,14 @@
 <main>
-  <div
-    class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary"
-  >
+  <div class="position-relative overflow-hidden p-3 p-md-5 text-center">
     <div class="col-md-6 p-lg-5 mx-auto my-5">
-      <h1 class="display-3 fw-bold">I nostri cani</h1>
+      <h1 class="display-3 fw-bold">I nostri uccelli</h1>
       <h3 class="fw-normal text-muted mb-3">
-        L'amore incondizionato ha il naso bagnato!
+        Nel volo libero degli uccelli domestici si cela la bellezza di una
+        libertà condivisa, un'armonia che si posa dolcemente tra le ali e i
+        cuori.
       </h3>
       <div class="gap-3 justify-content-center fw-normal">
-        <span>Hai trovato un cucciolo?</span>
+        <span>Hai trovato un pulcino?</span>
         <a class="icon-link ms-2" [routerLink]="['/auth', 'register']">
           Aggiungilo al nostro sito!
           <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
@@ -22,12 +22,12 @@
       class="product-device product-device-2 shadow-sm d-none d-md-block"
     ></div>
   </div>
-  <div class="container">
+  <div class="container mb-5">
     <div class="row">
-      <div *ngFor="let bird of birds" class="col-6 col-lg-4">
+      <div *ngFor="let bird of birds" class="col-6 col-lg-4 mb-5">
         <div
-          class="mx-md-2 pt-3 pt-md-5 px-md-5 text-center"
-          style="background-color: rgb(0, 212, 240)"
+          class="text-light mx-md-2 pt-3 pt-md-5 px-md-5 text-center"
+          style="background-color: rgb(2, 116, 131)"
         >
           <div class="my-2 py-2">
             <h2 class="display-5">{{ bird.name }}</h2>
