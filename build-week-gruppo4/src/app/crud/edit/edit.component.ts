@@ -24,14 +24,14 @@ export class EditComponent {
 
   ngOnInit() {
     this.route.params.subscribe((params: any) => {
-      this.crudSvc.getById(params.id).subscribe((animal) => {
+      this.crudSvc.getById(params.id, 'cane').subscribe((animal) => {
         this.animal = animal;
       });
     });
   }
 
   edit() {
-    this.crudSvc.put(this.animal).subscribe((animal) => {
+    this.crudSvc.put(this.animal, 'cane').subscribe((animal) => {
       this.router.navigate(['/crud']);
     });
   }

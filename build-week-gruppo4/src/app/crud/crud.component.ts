@@ -18,6 +18,8 @@ export class CrudComponent {
     url: '',
   };
 
+  specie!: string;
+
   @ViewChild('f') form!: NgForm;
 
   constructor(private crudSvc: CrudService) {}
@@ -30,14 +32,16 @@ export class CrudComponent {
   }
 
   delete(id: number) {
-    this.crudSvc.delete(id).subscribe((data) => {
+    this.crudSvc.delete(id, 'cane').subscribe((data) => {
       let index = this.animals.findIndex((p) => p.id == id);
       this.animals.splice(index, 1);
     });
   }
 
-  create() {
-    this.crudSvc.post(this.newAnimal).subscribe((data) => {
+  create(specie: string) {
+    console.log(specie);
+
+    this.crudSvc.post(this.newAnimal, specie).subscribe((data) => {
       this.animals.push(data);
       this.form.reset();
     });
