@@ -1,4 +1,4 @@
-<form>
+<form #f="ngForm">
   <input
     type="text"
     class="form-control"
@@ -30,20 +30,43 @@
   <button class="btn btn-primary" (click)="create()">Aggiungi cane</button>
 </form>
 
-<table class="table mt-5">
+<!-- <table class="table mt-5">
   <tr *ngFor="let animal of animals">
     <td><img src="{{ animal.url }}" alt="" /></td>
     <td>{{ animal.name }}</td>
     <td>{{ animal.breed }}</td>
     <td>{{ animal.description }}</td>
     <td>
-      <button
-        class="btn btn-warning"
-        [routerLink]="['/dashboard', 'edit', animal.id]"
-      >
+      <a class="btn btn-warning" [routerLink]="['/crud', 'edit', animal.id]">
         Modifica
-      </button>
+      </a>
       <button class="btn btn-danger" (click)="delete(animal.id)">Delete</button>
     </td>
   </tr>
-</table>
+</table> -->
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-3" *ngFor="let animal of animals">
+      <div class="card">
+        <img
+          src="{{ animal.url }}"
+          class="card-img-top"
+          alt="..."
+          height="300"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ animal.name }}</h5>
+          <h6 class="card-title">{{ animal.breed }}</h6>
+          <p class="card-text">{{ animal.description }}</p>
+          <a
+            class="btn btn-warning"
+            [routerLink]="['/crud', 'edit', animal.id]"
+          >
+            Modifica
+          </a>
+          <a class="btn btn-primary" (click)="delete(animal.id)">Cancella</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

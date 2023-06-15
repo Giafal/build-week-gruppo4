@@ -7,9 +7,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FaqsComponent } from './components/faqs/faqs.component';
+import { AboutComponent } from './components/about/about.component';
+import { DogsComponent } from './components/dogs/dogs.component';
+import { CatsComponent } from './components/cats/cats.component';
+import { AnimalsComponent } from './components/animals/animals.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, FaqsComponent, AboutComponent, DogsComponent, CatsComponent, AnimalsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
