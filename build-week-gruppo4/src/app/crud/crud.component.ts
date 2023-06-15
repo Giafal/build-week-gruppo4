@@ -9,7 +9,10 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./crud.component.scss'],
 })
 export class CrudComponent {
-  animals: Ianimals[] = [];
+  dogs: Ianimals[] = [];
+  cats: Ianimals[] = [];
+  birds: Ianimals[] = [];
+  hamsters: Ianimals[] = [];
 
   newAnimal: Partial<Ianimals> = {
     name: '',
@@ -25,16 +28,53 @@ export class CrudComponent {
   constructor(private crudSvc: CrudService) {}
 
   ngOnInit() {
-    this.crudSvc.getAll('cane').subscribe((animals) => {
-      this.animals = animals;
-      console.log(animals);
+    this.getAnimals();
+  }
+
+  getAnimals() {
+    this.crudSvc.getAll('cane').subscribe((data) => {
+      this.dogs = data;
+      console.log(data);
+    });
+    this.crudSvc.getAll('gatto').subscribe((data) => {
+      this.cats = data;
+      console.log(data);
+    });
+    this.crudSvc.getAll('uccelli').subscribe((data) => {
+      this.birds = data;
+      console.log(data);
+    });
+    this.crudSvc.getAll('coniglio').subscribe((data) => {
+      this.hamsters = data;
+      console.log(data);
     });
   }
 
-  delete(id: number) {
+  deleteDog(id: number) {
     this.crudSvc.delete(id, 'cane').subscribe((data) => {
-      let index = this.animals.findIndex((p) => p.id == id);
-      this.animals.splice(index, 1);
+      let index = this.dogs.findIndex((p) => p.id == id);
+      this.dogs.splice(index, 1);
+    });
+  }
+
+  deleteCat(id: number) {
+    this.crudSvc.delete(id, 'gatto').subscribe((data) => {
+      let index = this.cats.findIndex((p) => p.id == id);
+      this.cats.splice(index, 1);
+    });
+  }
+
+  deleteBird(id: number) {
+    this.crudSvc.delete(id, 'uccelli').subscribe((data) => {
+      let index = this.birds.findIndex((p) => p.id == id);
+      this.birds.splice(index, 1);
+    });
+  }
+
+  deleteHamster(id: number) {
+    this.crudSvc.delete(id, 'hamster').subscribe((data) => {
+      let index = this.hamsters.findIndex((p) => p.id == id);
+      this.hamsters.splice(index, 1);
     });
   }
 
@@ -42,7 +82,7 @@ export class CrudComponent {
     console.log(specie);
 
     this.crudSvc.post(this.newAnimal, specie).subscribe((data) => {
-      this.animals.push(data);
+      // this.animals.push(data);
       this.form.reset();
     });
   }
