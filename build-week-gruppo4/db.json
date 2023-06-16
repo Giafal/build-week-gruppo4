@@ -41,6 +41,13 @@
       "name": "Gianluca",
       "surname": "Falcone",
       "id": 6
+    },
+    {
+      "email": "Tommaso.brigaglia@gmail.com",
+      "password": "$2a$10$mwB.vVx957JZ.BCZ2Ax7fuwwCWz6H/60hZAsN2DfD4ttr9pPGX1wK",
+      "name": "tommaso",
+      "surname": "brigaglia",
+      "id": 7
     }
   ],
   "gatto": [
@@ -141,6 +148,12 @@
       "surname": "Falcone",
       "text": "prova commento",
       "id": 1
+    },
+    {
+      "name": "tommaso",
+      "surname": "brigaglia",
+      "text": "ottima assistenza clienti, personale disponibile e gentile.",
+      "id": 2
     }
   ]
 }
