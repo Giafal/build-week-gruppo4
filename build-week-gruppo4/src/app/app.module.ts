@@ -44,8 +44,6 @@ import { RouterModule } from '@angular/router';
     MatExpansionModule,
     BrowserAnimationsModule,
     RouterModule,
-    NgModule,
-    NgForm,
   ],
   providers: [],
   bootstrap: [AppComponent],
