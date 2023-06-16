@@ -27,16 +27,39 @@
             >Home</a
           >
         </li>
-        <li><a href="#" class="nav-link px-2 text-white mx-3">Pets</a></li>
+        <li>
+          <a [routerLink]="['/dogs']" class="nav-link px-2 text-white mx-3"
+            >Cani</a
+          >
+        </li>
+        <li>
+          <a [routerLink]="['/cats']" class="nav-link px-2 text-white mx-3"
+            >Gatti</a
+          >
+        </li>
+        <li>
+          <a [routerLink]="['/birds']" class="nav-link px-2 text-white mx-3"
+            >Uccelli</a
+          >
+        </li>
+        <li>
+          <a [routerLink]="['/hamsters']" class="nav-link px-2 text-white mx-3"
+            >Criceti</a
+          >
+        </li>
         <li>
           <a
             href="#"
             class="nav-link px-2 text-white mx-3"
             [routerLink]="['/crud']"
-            >Add pet</a
+            >Aggiungi pet</a
           >
         </li>
-        <li><a href="#" class="nav-link px-2 text-white mx-3">About</a></li>
+        <li>
+          <a [routerLink]="['/about']" class="nav-link px-2 text-white mx-3"
+            >Dicono di noi</a
+          >
+        </li>
         <li>
           <a [routerLink]="['/faqs']" class="nav-link px-2 text-white mx-3"
             >FAQs</a
@@ -44,14 +67,14 @@
         </li>
       </ul>
 
-      <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+      <!-- <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
         <input
           type="search"
           class="form-control form-control-dark"
           placeholder="Search..."
           aria-label="Search"
         />
-      </form>
+      </form> -->
 
       <div class="text-end">
         <button
@@ -60,7 +83,7 @@
           type="button"
           class="btn btn-outline-light me-2"
         >
-          Logout
+          Esci
         </button>
         <ng-template #loginButton>
           <button
@@ -68,7 +91,7 @@
             class="btn btn-outline-light me-2"
             [routerLink]="['/auth', 'login']"
           >
-            Login
+            Accedi
           </button>
         </ng-template>
         <button
@@ -76,7 +99,7 @@
           class="btn btn-outline-light btn-success"
           [routerLink]="['/auth', 'register']"
         >
-          Sign-up
+          Registrati
         </button>
 
         <!-- <div class="dropdown text-end">
