@@ -41,7 +41,7 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     HttpClientModule,
     MatExpansionModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
     RouterModule
   ],
   providers: [],
