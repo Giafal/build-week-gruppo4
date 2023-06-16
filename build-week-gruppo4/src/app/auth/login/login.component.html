@@ -1,6 +1,10 @@
 <main class="form-signin w-100 m-auto py-3">
   <form #f="ngForm">
     <h1 class="mb-3">Inserisci i tuoi dati</h1>
+    <h3>
+      Non sei ancora registrato?
+      <a [routerLink]="['/auth', 'register']">Registrati!</a>
+    </h3>
 
     <div class="form-floating py-2">
       <input
@@ -15,7 +19,9 @@
         [(ngModel)]="data.email"
       />
       <label for="floatingInput">Email address</label>
-      <span fw-bold *ngIf="email.invalid && email.touched">Campo Obbligatorio</span>
+      <span fw-bold *ngIf="email.invalid && email.touched"
+        >Campo Obbligatorio</span
+      >
     </div>
     <div class="form-floating py-2">
       <input
@@ -30,9 +36,17 @@
         [(ngModel)]="data.password"
       />
       <label for="floatingPassword">Password</label>
-      <span fw-bold *ngIf="password.invalid && password.touched">Campo Obbligatorio</span>
+      <span fw-bold *ngIf="password.invalid && password.touched"
+        >Campo Obbligatorio</span
+      >
     </div>
 
-    <button [disabled]="f.invalid" class="btn btn-primary w-100 py-2" (click)="login()">Login</button>
+    <button
+      [disabled]="f.invalid"
+      class="btn btn-primary w-100 py-2"
+      (click)="login()"
+    >
+      Login
+    </button>
   </form>
 </main>
