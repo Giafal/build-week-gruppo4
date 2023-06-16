@@ -1,61 +1,58 @@
-
-
-#sidebar-sx{
-  background-image: linear-gradient(to right top, #123408, #19470B) ;
-  a{
+#sidebar-sx {
+  background-image: linear-gradient(to right top, #123408, #19470b);
+  a {
     text-decoration: none;
-    color:#ffffff;
+    color: #ffffff;
   }
 }
-#middle{
-  background-image: linear-gradient( to right bottom, #12402b, #30DC8F);
-  h1{
+#middle {
+  background-image: linear-gradient(to right bottom, #12402b, #30dc8f);
+  h1 {
     font-size: 4em;
   }
-  .text-b{
+  .text-b {
     font-size: 2em;
   }
-  img{
+  img {
     border-radius: 100%;
   }
-  img:hover{
+  img:hover {
     transform: scale(1.4);
   }
-  button{
-    border-color:#12402b;
+  button {
+    border-color: #12402b;
     background-color: #12402b;
     font-weight: bold;
     width: 200px;
-
   }
   button:hover {
-    background-color: #30DC8F;
+    background-color: #30dc8f;
     transform: scale(1.3);
     z-index: 1;
   }
-  a{
+  a {
     text-decoration: none;
-    color:#ffffff;
+    color: #ffffff;
   }
 
+  p {
+    line-height: 1.8rem;
+  }
 }
 
-.c-green{
-  color: #34D5BA;
+.c-green {
+  color: #34d5ba;
 }
 
-#sidebar-dx{
-  background-image: linear-gradient(to right top, #123408, #19470B) ;
+#sidebar-dx {
+  background-image: linear-gradient(to right top, #123408, #19470b);
 
-
-  #sidebar-footer{
+  #sidebar-footer {
     width: 90%;
   }
 }
 
-
-
-.rabbit{
+.rabbit {
   position: relative;
   right: 20px;
 }
