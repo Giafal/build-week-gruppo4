@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { CrudService } from 'src/app/crud/crud.service';
 import { Ianimals } from 'src/app/interfaces/ianimals';
+import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-birds',

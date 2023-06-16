@@ -15,6 +15,7 @@ import { AnimalsComponent } from './components/animals/animals.component';
 import { BirdsComponent } from './components/birds/birds.component';
 import { HamstersComponent } from './components/hamsters/hamsters.component';
 import { HomeComponent } from './components/home/home.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import { HomeComponent } from './components/home/home.component';
     DogsComponent, HomeComponent,
     CatsComponent,
     AnimalsComponent,
-    HomeComponent
+    HomeComponent,
+    HamstersComponent,
+    BirdsComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +37,7 @@ import { HomeComponent } from './components/home/home.component';
     NgbModule,
     FormsModule,
     HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent],
