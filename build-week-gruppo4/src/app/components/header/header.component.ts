@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { AuthService } from 'src/app/auth/auth.service';
 export class HeaderComponent {
   isLogged: boolean = false;
 
-  constructor(public authSvc: AuthService) {}
+  constructor(public authSvc: AuthService, private router: Router) {}
 
   ngOnInit() {
     this.isLoggedIn();

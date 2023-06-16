@@ -33,7 +33,7 @@ import { RouterModule } from '@angular/router';
     AnimalsComponent,
     HomeComponent,
     HamstersComponent,
-    BirdsComponent,
+    BirdsComponent
   ],
   imports: [
     BrowserModule,
@@ -44,9 +44,7 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     MatExpansionModule,
     BrowserAnimationsModule,
-
-
-
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent],
