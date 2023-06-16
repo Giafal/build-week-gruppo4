@@ -40,11 +40,13 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule,
     NgbModule,
     FormsModule,
+    RouterModule,
     HttpClientModule,
     MatExpansionModule,
     BrowserAnimationsModule,
-    RouterModule,
-    NgModule
+
+
+
   ],
   providers: [],
   bootstrap: [AppComponent],
