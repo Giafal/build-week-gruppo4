@@ -75,6 +75,8 @@ export class AuthService {
       return;
     }
 
+    this.isLogged = true;
+
     this.authSubject.next(user);
   }
 
