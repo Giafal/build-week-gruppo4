@@ -27,6 +27,13 @@
       "name": "Mario",
       "surname": "Biondi",
       "id": 4
+    },
+    {
+      "email": "snalfnaslfl@sdfasf.it",
+      "password": "$2a$10$/OkU//PTgO6WVuBbdeRZi.24xTgWEUoSllTZoYsm..vwYgPEY.xF.",
+      "name": "Gianluca",
+      "surname": "Falcone",
+      "id": 5
     }
   ],
   "gatto": [
