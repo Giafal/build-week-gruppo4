@@ -12,6 +12,9 @@ import { AboutComponent } from './components/about/about.component';
 import { DogsComponent } from './components/dogs/dogs.component';
 import { CatsComponent } from './components/cats/cats.component';
 import { AnimalsComponent } from './components/animals/animals.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { BirdsComponent } from './components/birds/birds.component';
 import { HamstersComponent } from './components/hamsters/hamsters.component';
 import { HomeComponent } from './components/home/home.component';
@@ -37,6 +40,8 @@ import { RouterModule } from '@angular/router';
     NgbModule,
     FormsModule,
     HttpClientModule,
+    MatExpansionModule,
+    BrowserAnimationsModule
     RouterModule
   ],
   providers: [],

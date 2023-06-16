@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 
 @Component({
   selector: 'app-faqs',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./faqs.component.scss']
 })
 export class FaqsComponent {
+  panelOpenState = false;
 
 }
