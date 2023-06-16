@@ -33,17 +33,19 @@ import { RouterModule } from '@angular/router';
     AnimalsComponent,
     HomeComponent,
     HamstersComponent,
-    BirdsComponent,
+    BirdsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
+    RouterModule,
     HttpClientModule,
     MatExpansionModule,
     BrowserAnimationsModule,
     RouterModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],
