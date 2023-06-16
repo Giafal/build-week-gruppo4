@@ -14,9 +14,12 @@
   }
   .text-b{
     font-size: 2em;
+    line-height: 1em;
   }
   img{
     border-radius: 100%;
+    transition: all 0.5s;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.644);
   }
   img:hover{
     transform: scale(1.4);
@@ -26,7 +29,8 @@
     background-color: #12402b;
     font-weight: bold;
     width: 200px;
-
+    transition: all 0.5s;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.644);
   }
   button:hover {
     background-color: #30DC8F;
