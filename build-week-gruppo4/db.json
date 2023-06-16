@@ -153,20 +153,20 @@
     {
       "name": "Gianluca",
       "surname": "Falcone",
-      "text": "prova commento",
-      "id": 1
+      "text": "Veramente affidabili e preparati.",
+      "id": 2
+    },
+    {
+      "name": "Pinco",
+      "surname": "Pallino",
+      "text": "Sono rimasto veramente soddisfatto del loro servizio di vaccinazione.",
+      "id": 3
     },
     {
       "name": "tommaso",
       "surname": "brigaglia",
       "text": "ottima assistenza clienti, personale disponibile e gentile.",
       "id": 2
-    },
-    {
-      "name": "tommaso",
-      "surname": "brigaglia",
-      "text": "molto bravi",
-      "id": 3
     }
   ]
 }

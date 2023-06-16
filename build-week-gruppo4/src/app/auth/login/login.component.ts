@@ -25,7 +25,7 @@ export class LoginComponent {
     console.log(this.data);
     this.authSvc.login(this.data).subscribe((accessData) => {
       alert(`Sei loggato come ${accessData.user.name}`);
-      this.router.navigate(['/crud']);
+      this.router.navigate(['/auth']);
       this.isLoggedIn();
     });
   }
