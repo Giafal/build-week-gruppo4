@@ -41,6 +41,13 @@
       "name": "Gianluca",
       "surname": "Falcone",
       "id": 6
+    },
+    {
+      "email": "andrea.isgro01@gmail.com",
+      "password": "$2a$10$TGQUKq4jtxtFmsC9.nz2pOOkeWk4mkjCprtiTcrptpYr3q3YRHbX6",
+      "name": "andrea",
+      "surname": "isgro",
+      "id": 7
     }
   ],
   "gatto": [
@@ -141,6 +148,12 @@
       "surname": "Falcone",
       "text": "prova commento",
       "id": 1
+    },
+    {
+      "name": "",
+      "surname": "",
+      "text": "Splendido servizio clienti",
+      "id": 2
     }
   ]
 }
