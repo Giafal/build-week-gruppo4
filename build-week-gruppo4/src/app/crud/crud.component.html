@@ -1,49 +1,51 @@
 <div class="main m-auto py-3">
   <form #f="ngForm" class="w-50 text-center">
-  <input
-    type="text"
-    class="form-control"
-    name="name"
-    [(ngModel)]="newAnimal.name"
-    placeholder="Name"
-  />
-  <input
-    type="text"
-    class="form-control"
-    name="breed"
-    [(ngModel)]="newAnimal.breed"
-    placeholder="Breed"
-  />
-  <input
-    type="text"
-    class="form-control"
-    name="description"
-    [(ngModel)]="newAnimal.description"
-    placeholder="Description"
-  />
-  <input
-    type="text"
-    class="form-control"
-    name="Url"
-    [(ngModel)]="newAnimal.url"
-    placeholder="Url"
-  />
-  <select
-    name="specie"
-    id="specie"
-    class="form-select"
-    multiple
-    aria-label="multiple select example"
-    [(ngModel)]="specie"
-  >
-    <option selected>--scegli specie--</option>
-    <option value="cane">Cane</option>
-    <option value="gatto">Gatto</option>
-    <option value="uccelli">Uccello</option>
-    <option value="coniglio">Criceto</option>
-  </select>
-  <button class="btn btn-primary" (click)="create(specie)">Aggiungi pet</button>
-</form>
+    <input
+      type="text"
+      class="form-control"
+      name="name"
+      [(ngModel)]="newAnimal.name"
+      placeholder="Nome"
+    />
+    <input
+      type="text"
+      class="form-control"
+      name="breed"
+      [(ngModel)]="newAnimal.breed"
+      placeholder="Razza"
+    />
+    <input
+      type="text"
+      class="form-control"
+      name="description"
+      [(ngModel)]="newAnimal.description"
+      placeholder="Descrizione"
+    />
+    <input
+      type="text"
+      class="form-control"
+      name="Url"
+      [(ngModel)]="newAnimal.url"
+      placeholder="Url immagine"
+    />
+    <select
+      name="specie"
+      id="specie"
+      class="form-select"
+      multiple
+      aria-label="multiple select example"
+      [(ngModel)]="specie"
+    >
+      <option selected>--scegli specie--</option>
+      <option value="cane">Cane</option>
+      <option value="gatto">Gatto</option>
+      <option value="uccelli">Uccello</option>
+      <option value="coniglio">Criceto</option>
+    </select>
+    <button class="btn btn-primary" (click)="create(specie)">
+      Aggiungi pet
+    </button>
+  </form>
 </div>
 
 <table class="table mt-5">
