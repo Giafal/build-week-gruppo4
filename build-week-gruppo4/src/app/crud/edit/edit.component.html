@@ -1,26 +1,32 @@
-<form>
+<form class="main flex-column">
   <input
     type="text"
-    class="form-control"
+    class="form-control my-2"
     name="name"
     [(ngModel)]="animal.name"
   />
 
   <input
     type="text"
-    class="form-control"
+    class="form-control my-2"
     name="breed"
     [(ngModel)]="animal.breed"
   />
 
-  <input
+  <textarea
     type="text"
-    class="form-control"
+    rows="2"
+    class="form-control my-2"
     name="description"
     [(ngModel)]="animal.description"
+  ></textarea>
+
+  <input
+    type="text"
+    class="form-control my-2"
+    name="url"
+    [(ngModel)]="animal.url"
   />
 
-  <input type="text" class="form-control" name="url" [(ngModel)]="animal.url" />
-
-  <button class="btn btn-primary" (click)="edit()">Modifica cane</button>
+  <button class="btn btn-primary my-2" (click)="edit()">Modifica cane</button>
 </form>
