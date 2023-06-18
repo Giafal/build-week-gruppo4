@@ -44,10 +44,10 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     MatExpansionModule,
     BrowserAnimationsModule,
-
+    RouterModule
 
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
