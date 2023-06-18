@@ -2,28 +2,28 @@
   <form #f="ngForm" class="w-50 text-center">
     <input
       type="text"
-      class="form-control"
+      class="form-control my-2"
       name="name"
       [(ngModel)]="newAnimal.name"
       placeholder="Nome"
     />
     <input
       type="text"
-      class="form-control"
+      class="form-control my-2"
       name="breed"
       [(ngModel)]="newAnimal.breed"
       placeholder="Razza"
     />
     <input
       type="text"
-      class="form-control"
+      class="form-control my-2"
       name="description"
       [(ngModel)]="newAnimal.description"
       placeholder="Descrizione"
     />
     <input
       type="text"
-      class="form-control"
+      class="form-control my-2"
       name="Url"
       [(ngModel)]="newAnimal.url"
       placeholder="Url immagine"
@@ -31,7 +31,7 @@
     <select
       name="specie"
       id="specie"
-      class="form-select"
+      class="form-select my-2"
       multiple
       aria-label="multiple select example"
       [(ngModel)]="specie"
@@ -42,7 +42,7 @@
       <option value="uccelli">Uccello</option>
       <option value="coniglio">Criceto</option>
     </select>
-    <button class="btn btn-primary" (click)="create(specie)">
+    <button class="btn btn-primary my-2" (click)="create(specie)">
       Aggiungi pet
     </button>
   </form>

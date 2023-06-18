@@ -41,6 +41,13 @@
       "name": "Gianluca",
       "surname": "Falcone",
       "id": 6
+    },
+    {
+      "email": "abra@cadabra.it",
+      "password": "$2a$10$piBixElvWA7RYJ/DFig3oOgzZWCkzbyZEUa8w9nUEPk.tyybjJtH.",
+      "name": "abra",
+      "surname": "cadabra",
+      "id": 7
     }
   ],
   "gatto": [
