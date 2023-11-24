@@ -48,64 +48,70 @@
   </form>
 </div>
 
-<table class="table mt-5">
-  <tr *ngFor="let dog of dogs">
-    <td><img src="{{ dog.url }}" alt="" /></td>
-    <td>{{ dog.name }}</td>
-    <td>{{ dog.breed }}</td>
-    <td>{{ dog.description }}</td>
-    <td>
-      <a class="btn btn-warning" [routerLink]="['/crud', 'edit', dog.id]">
-        Modifica
-      </a>
-      <button class="btn btn-danger" (click)="deleteDog(dog.id)">
-        Elimina
-      </button>
-    </td>
-  </tr>
-  <tr *ngFor="let cat of cats">
-    <td><img src="{{ cat.url }}" alt="" /></td>
-    <td>{{ cat.name }}</td>
-    <td>{{ cat.breed }}</td>
-    <td>{{ cat.description }}</td>
-    <td>
-      <a class="btn btn-warning" [routerLink]="['/crud', 'edit-cat', cat.id]">
-        Modifica
-      </a>
-      <button class="btn btn-danger" (click)="deleteCat(cat.id)">
-        Elimina
-      </button>
-    </td>
-  </tr>
-  <tr *ngFor="let bird of birds">
-    <td><img src="{{ bird.url }}" alt="" /></td>
-    <td>{{ bird.name }}</td>
-    <td>{{ bird.breed }}</td>
-    <td>{{ bird.description }}</td>
-    <td>
-      <a class="btn btn-warning" [routerLink]="['/crud', 'edit-bird', bird.id]">
-        Modifica
-      </a>
-      <button class="btn btn-danger" (click)="deleteBird(bird.id)">
-        Elimina
-      </button>
-    </td>
-  </tr>
-  <tr *ngFor="let hamster of hamsters">
-    <td><img src="{{ hamster.url }}" alt="" /></td>
-    <td>{{ hamster.name }}</td>
-    <td>{{ hamster.breed }}</td>
-    <td>{{ hamster.description }}</td>
-    <td>
-      <a
-        class="btn btn-warning"
-        [routerLink]="['/crud', 'edit-hamster', hamster.id]"
-      >
-        Modifica
-      </a>
-      <button class="btn btn-danger" (click)="deleteHamster(hamster.id)">
-        Elimina
-      </button>
-    </td>
-  </tr>
-</table>
+<div class="elenco w-100">
+  <div class="row px-5 pt-5">
+    <div class="col-12">
+      <table class="table">
+        <tr *ngFor="let dog of dogs">
+          <td><img src="{{ dog.url }}" alt=""  class="rounded-4 my-2"/></td>
+          <td>{{ dog.name }}</td>
+          <td>{{ dog.breed }}</td>
+          <td>{{ dog.description }}</td>
+          <td class="text-center">
+            <a class="btn btn-warning mb-2" [routerLink]="['/crud', 'edit', dog.id]">
+              Modifica
+            </a>
+            <button class="btn btn-danger" (click)="deleteDog(dog.id)">
+              Elimina
+            </button>
+          </td>
+        </tr>
+        <tr *ngFor="let cat of cats">
+          <td><img src="{{ cat.url }}" alt="" class="rounded-4 my-2"/></td>
+          <td>{{ cat.name }}</td>
+          <td>{{ cat.breed }}</td>
+          <td>{{ cat.description }}</td>
+          <td class="text-center">
+            <a class="btn btn-warning mb-2" [routerLink]="['/crud', 'edit-cat', cat.id]">
+              Modifica
+            </a>
+            <button class="btn btn-danger" (click)="deleteCat(cat.id)">
+              Elimina
+            </button>
+          </td>
+        </tr>
+        <tr *ngFor="let bird of birds">
+          <td><img src="{{ bird.url }}" alt="" class="rounded-4 my-2"/></td>
+          <td>{{ bird.name }}</td>
+          <td>{{ bird.breed }}</td>
+          <td>{{ bird.description }}</td>
+          <td class="text-center">
+            <a class="btn btn-warning mb-2" [routerLink]="['/crud', 'edit-bird', bird.id]">
+              Modifica
+            </a>
+            <button class="btn btn-danger" (click)="deleteBird(bird.id)">
+              Elimina
+            </button>
+          </td>
+        </tr>
+        <tr *ngFor="let hamster of hamsters">
+          <td><img src="{{ hamster.url }}" alt="" class="rounded-4 my-2"/></td>
+          <td>{{ hamster.name }}</td>
+          <td>{{ hamster.breed }}</td>
+          <td>{{ hamster.description }}</td>
+          <td class="text-center">
+            <a
+              class="btn btn-warning mb-2"
+              [routerLink]="['/crud', 'edit-hamster', hamster.id]"
+            >
+              Modifica
+            </a>
+            <button class="btn btn-danger" (click)="deleteHamster(hamster.id)">
+              Elimina
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

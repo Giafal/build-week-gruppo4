@@ -48,6 +48,34 @@
       "name": "abra",
       "surname": "cadabra",
       "id": 7
+    },
+    {
+      "email": "aureAure@aure.aure",
+      "password": "$2a$10$h.As.uIw2ZAxBw9QrspNsupKXkYsl4fM4ZJ1zLA1lJvyqpoC1NcA6",
+      "name": "aure",
+      "surname": "aure",
+      "id": 8
+    },
+    {
+      "email": "Sahraoui_hassan@hassan.com",
+      "password": "$2a$10$X.G7fChi5Z9q9L0ZkFHp5eNx7O5Qrp/moOz18X.XmOsMDGlVrm1tW",
+      "name": "Hassan",
+      "surname": "Sahraoui",
+      "id": 9
+    },
+    {
+      "email": "samantha@khatab.com",
+      "password": "$2a$10$Yom9n7iEYnNXAxWuHmaLgeH8e5lRiu7e5MParMY6n14T50UUsKdRO",
+      "name": "samantha",
+      "surname": "khatab",
+      "id": 10
+    },
+    {
+      "email": "luca@luca.com",
+      "password": "$2a$10$V0IBmaOfZJyR2n/sFOKqtOuSMxUHLszT.dHZ6o4kY0/rWvp0/kFNK",
+      "name": "luca",
+      "surname": "rossi",
+      "id": 11
     }
   ],
   "gatto": [
@@ -78,6 +106,20 @@
       "description": "gatta bellissima",
       "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxEH5VhkmV_r3etuGlTyNIRTF1OZFYGgqTF6mxdCjp&s",
       "id": 4
+    },
+    {
+      "name": "mimì",
+      "breed": "europea",
+      "description": "stupenda",
+      "url": "https://www.helvetia.com/it/web/it/chi-siamo/blog/Assicurazione/animali/assicurazione-gatto/_jcr_content/teaserimage/image.1614768295063.transform-fp/1920x1080/assicurazione-gatto.jpg",
+      "id": 5
+    },
+    {
+      "name": "titi",
+      "breed": "europeo",
+      "description": "gatto cucciolo",
+      "url": "https://www.ansa.it/webimages/news_base/2023/10/4/9c399d8f48c4d5b93a64fd5302c6472f.jpg",
+      "id": 6
     }
   ],
   "cane": [
@@ -167,6 +209,24 @@
       "surname": "Biondi",
       "text": "Sono rimasto veramente soddisfatto del loro servizio di vaccinazione.",
       "id": 4
+    },
+    {
+      "name": "Hassan",
+      "surname": "Sahraoui",
+      "text": "grazie ",
+      "id": 5
+    },
+    {
+      "name": "samantha",
+      "surname": "khatab",
+      "text": "molto affidabili e competenti",
+      "id": 6
+    },
+    {
+      "name": "luca",
+      "surname": "rossi",
+      "text": "veramente affidabili",
+      "id": 7
     }
   ]
 }

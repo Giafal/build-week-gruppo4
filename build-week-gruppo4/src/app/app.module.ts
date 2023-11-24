@@ -33,7 +33,8 @@ import { RouterModule } from '@angular/router';
     AnimalsComponent,
     HomeComponent,
     HamstersComponent,
-    BirdsComponent
+    BirdsComponent,
+
   ],
   imports: [
     BrowserModule,
